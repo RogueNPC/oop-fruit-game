@@ -1,4 +1,4 @@
-class game_system:
+class Game_system:
     def __init__(self):
         self.start_game()
 
