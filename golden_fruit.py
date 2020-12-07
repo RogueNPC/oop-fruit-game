@@ -1,6 +1,8 @@
 from random import randint
+from fruit import Fruit
 
-class Golden_fruit:
+class Golden_fruit(Fruit):
     def __init__(self, img, point_value=50):
-        super().__init__(img, point_value)
+        super().__init__(point_value)
+        self.img = "golden-apple"
         self.speed = randint(30,40)

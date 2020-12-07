@@ -8,6 +8,6 @@ class Fruit:
         self.point_value = point_value
 
     def create_fruit(self):
-        imgs = ["test"]
+        imgs = ["grape", "apple", "melon", "mango", "lemon", "orange", "banana"]
         rand_img = random.choice(imgs)
         return Fruit(rand_img)
