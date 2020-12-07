@@ -11,3 +11,6 @@ class Fruit:
         imgs = ["grape", "apple", "melon", "mango", "lemon", "orange", "banana"]
         rand_img = random.choice(imgs)
         return Fruit(rand_img)
+
+    def custom_fruit(self):
+        pass
