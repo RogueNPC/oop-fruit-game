@@ -1,22 +1,22 @@
 class Basket:
     def __init__(self):
-        self.pts = 0
-        self.caught_fruits = 0
-        self.basket_contents = []
+        self.__pts = 0
+        self.__caught_fruits = 0
+        self.__basket_contents = []
 
     def catch_fruit(self, point_value, name):
-        self.pts += point_value
-        self.caught_fruits += 1
-        self.basket_contents.append(name)
+        self.__pts += point_value
+        self.__caught_fruits += 1
+        self.__basket_contents.append(name)
         print("You caught a fruit!")
 
     def check_contents(self):
-        print(f"You have {self.caught_fruits} fruits in your basket.")
-        for fruit in self.basket_contents:
+        print(f"You have {self.__caught_fruits} fruits in your basket.")
+        for fruit in self.__basket_contents:
             print(fruit)
 
     def check_points(self):
-        print(f"You have {self.pts} points in total.")
+        print(f"You have {self.__pts} points in total.")
 
 
 if __name__ == "__main__":
