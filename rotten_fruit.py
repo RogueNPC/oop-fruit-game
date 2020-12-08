@@ -2,12 +2,12 @@ from random import randint
 from fruit import Fruit
 
 class Rotten_fruit(Fruit):
-    original_value = -20
+    __original_value = -20
     point_value = -20
 
     def __init__(self):
-        self.name = "durian"
-        self.speed = randint(15,30)
+        self._name = "durian"
+        self._speed = randint(15,30)
 
     @classmethod
     def change_value(cls, new_point_value):
@@ -16,8 +16,9 @@ class Rotten_fruit(Fruit):
 
     @classmethod
     def reset_value(cls):
-        cls.point_value = cls.original_value
-        print(f"The point value of golden fruits have been reset to {cls.original_value}")
+        cls.point_value = cls.__original_value
+        print(f"The point value of golden fruits have been reset to {cls.__original_value}")
+
 
 if __name__ == "__main__":
     # If you run this file from the terminal

@@ -6,12 +6,12 @@ from random import randint
 
 class Game_system:
     def __init__(self):
-        self.basket = self.create_basket()
+        self.__basket = self.__create_basket()
 
-    def create_basket(self):
+    def __create_basket(self):
         return Basket()
 
-    def create_fruit(self):
+    def __create_fruit(self):
         random_fruit = randint(1, 10)
         if (random_fruit < 8):
             return Fruit()
@@ -21,17 +21,17 @@ class Game_system:
             return Rotten_fruit()
 
     def change_fruit_value(self):
-        print(f"The current value of normal fruits is {Fruit.point_value}. The original value of normal fruits is {Fruit.original_value}")
+        print(f"The current value of normal fruits is {Fruit.point_value}.")
         new_value = input("What would you like the new point value for normal fruits to be? ")
         return Fruit.change_value(new_value)
 
     def change_golden_value(self):
-        print(f"The current value of normal fruits is {Golden_fruit.point_value}. The original value of golden fruits is {Golden_fruit.original_value}")
+        print(f"The current value of normal fruits is {Golden_fruit.point_value}.")
         new_value = input("What would you like the new point value for normal fruits to be? ")
         return Golden_fruit.change_value(new_value)
 
     def change_rotten_value(self):
-        print(f"The current value of normal fruits is {Rotten_fruit.point_value}. The original value of rotten fruits is {Rotten_fruit.original_value}")
+        print(f"The current value of normal fruits is {Rotten_fruit.point_value}.")
         new_value = input("What would you like the new point value for normal fruits to be? ")
         return Rotten_fruit.change_value(new_value)
 
@@ -45,14 +45,14 @@ class Game_system:
         return Rotten_fruit.reset_value()
 
     def catch_fruit(self):
-        examplefruit = self.create_fruit()
-        Basket.catch_fruit(self.basket, examplefruit.point_value, examplefruit.fruit_info())
+        examplefruit = self.__create_fruit()
+        Basket.catch_fruit(self.__basket, examplefruit.point_value, examplefruit.fruit_info())
 
     def check_contents(self):
-        Basket.check_contents(self.basket)
+        Basket.check_contents(self.__basket)
 
     def check_points(self):
-        Basket.check_points(self.basket)
+        Basket.check_points(self.__basket)
 
 
 if __name__ == "__main__":
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # make looping menu with options like in superhero team dueler?
 
     # for foo in range(1,11):
-    #     print(game.create_fruit().__dict__)
+    #     print(game.__create_fruit().__dict__)
 
     # game.change_fruit_value()
     # game.change_golden_value()
