@@ -7,10 +7,6 @@ from random import randint
 class Game_system:
     def __init__(self):
         self.basket = self.create_basket()
-        self.start_game()
-
-    def start_game(self):
-        self.create_basket()
 
     def create_basket(self):
         return Basket()
