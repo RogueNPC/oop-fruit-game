@@ -2,12 +2,12 @@ import random
 from random import randint
 
 class Fruit:
-    fruit_list = ["grape", "apple", "melon", "mango", "lemon", "orange", "banana"]
+    __fruit_list = ["grape", "apple", "melon", "mango", "lemon", "orange", "banana"]
     original_value = 10
     point_value = 10
 
     def __init__(self):
-        self.name = random.choice(Fruit.fruit_list)
+        self.name = random.choice(Fruit.__fruit_list)
         self.speed = randint(15,30)
 
     @classmethod
@@ -20,3 +20,5 @@ if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
     testfruit = Fruit()
+    Fruit.change_value(15)
+    print(testfruit.__dict__)

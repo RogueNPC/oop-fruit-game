@@ -5,7 +5,7 @@ class Rotten_fruit(Fruit):
     original_value = -100
     point_value = -100
 
-    def __init__(self, name):
+    def __init__(self):
         self.name = "durian-fruit"
         self.speed = randint(15,30)
 

@@ -5,7 +5,7 @@ class Golden_fruit(Fruit):
     original_value = 50
     point_value = 50
 
-    def __init__(self, name):
+    def __init__(self):
         self.name = "golden-apple"
         self.speed = randint(30,45)
 
@@ -18,4 +18,8 @@ class Golden_fruit(Fruit):
 if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
-    pass
+    goldfruit = Golden_fruit()
+    print(goldfruit.point_value)
+    Golden_fruit.change_value(40)
+    goldfruit1 = Golden_fruit()
+    print(goldfruit1.point_value)
