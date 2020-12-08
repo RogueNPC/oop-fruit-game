@@ -6,6 +6,7 @@ from random import randint
 
 class Game_system:
     def __init__(self):
+        self.basket = self.create_basket()
         self.start_game()
 
     def start_game(self):
@@ -16,9 +17,9 @@ class Game_system:
 
     def create_fruit(self):
         random_fruit = randint(1, 10)
-        if (random_fruit < 7):
+        if (random_fruit < 8):
             return Fruit()
-        elif (random_fruit == 7):
+        elif (random_fruit == 8):
             return Golden_fruit()
         else:
             return Rotten_fruit()
@@ -38,14 +39,29 @@ class Game_system:
         new_value = input("What would you like the new point value for normal fruits to be? ")
         return Fruit.change_value(new_value)
 
+    def catch_fruit(self):
+        examplefruit = self.create_fruit()
+        Basket.catch_fruit(self.basket, examplefruit.point_value, examplefruit.name)
+
+    def check_contents(self):
+        Basket.check_contents(self.basket)
+
+    def check_points(self):
+        Basket.check_points(self.basket)
+
+
 if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
 
     # Instantiate Game
     game = Game_system()
-    for foo in range(1,10):
-        print(game.create_fruit)
+    for foo in range(1,11):
+        print(game.create_fruit().__dict__)
     # game.change_fruit_value()
     # game.change_golden_value()
     # game.change_rotten_value()
+    for foo in range(1,11):
+        game.catch_fruit()
+    game.check_contents()
+    game.check_points()

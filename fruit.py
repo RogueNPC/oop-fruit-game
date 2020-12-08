@@ -20,5 +20,7 @@ if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
     testfruit = Fruit()
+    print(testfruit.point_value)
     Fruit.change_value(15)
-    print(testfruit.__dict__)
+    testfruit1 = Fruit()
+    print(testfruit1.point_value)

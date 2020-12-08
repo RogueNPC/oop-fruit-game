@@ -2,11 +2,11 @@ from random import randint
 from fruit import Fruit
 
 class Rotten_fruit(Fruit):
-    original_value = -100
-    point_value = -100
+    original_value = -20
+    point_value = -20
 
     def __init__(self):
-        self.name = "durian-fruit"
+        self.name = "durian"
         self.speed = randint(15,30)
 
     @classmethod
