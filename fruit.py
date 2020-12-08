@@ -2,15 +2,21 @@ import random
 from random import randint
 
 class Fruit:
-    def __init__(self, img, point_value=10):
-        self.img = img
+    fruit_list = ["grape", "apple", "melon", "mango", "lemon", "orange", "banana"]
+    original_value = 10
+    point_value = 10
+
+    def __init__(self):
+        self.name = random.choice(Fruit.fruit_list)
         self.speed = randint(15,30)
-        self.point_value = point_value
 
-    def create_fruit(self):
-        imgs = ["grape", "apple", "melon", "mango", "lemon", "orange", "banana"]
-        rand_img = random.choice(imgs)
-        return Fruit(rand_img)
+    @classmethod
+    def change_value(cls, new_point_value):
+        cls.point_value = new_point_value
+        print(f"The new point value of normal fruits is {new_point_value}.")
 
-    def custom_fruit(self):
-        pass
+
+if __name__ == "__main__":
+    # If you run this file from the terminal
+    # this block is executed.
+    testfruit = Fruit()
