@@ -10,9 +10,9 @@ class Golden_fruit(Fruit):
         self._speed = randint(30,45)
 
     @classmethod
-    def change_value(cls, new_point_value):
-        cls.point_value = new_point_value
-        print(f"The new point value of golden fruits is {new_point_value}.")
+    def change_value(cls, new_pts_value):
+        cls.point_value = new_pts_value
+        print(f"The new point value of golden fruits is {new_pts_value}.")
 
     @classmethod
     def reset_value(cls):
