@@ -32,16 +32,25 @@ class Game_system:
     def change_golden_value(self):
         print(f"The current value of normal fruits is {Golden_fruit.point_value}. The original value of golden fruits is {Golden_fruit.original_value}")
         new_value = input("What would you like the new point value for normal fruits to be? ")
-        return Fruit.change_value(new_value)
+        return Golden_fruit.change_value(new_value)
 
     def change_rotten_value(self):
         print(f"The current value of normal fruits is {Rotten_fruit.point_value}. The original value of rotten fruits is {Rotten_fruit.original_value}")
         new_value = input("What would you like the new point value for normal fruits to be? ")
-        return Fruit.change_value(new_value)
+        return Rotten_fruit.change_value(new_value)
+
+    def reset_fruit_value(self):
+        return Fruit.reset_value()
+
+    def reset_golden_value(self):
+        return Golden_fruit.reset_value()
+
+    def reset_rotten_value(self):
+        return Rotten_fruit.reset_value()
 
     def catch_fruit(self):
         examplefruit = self.create_fruit()
-        Basket.catch_fruit(self.basket, examplefruit.point_value, examplefruit.name)
+        Basket.catch_fruit(self.basket, examplefruit.point_value, examplefruit.fruit_info())
 
     def check_contents(self):
         Basket.check_contents(self.basket)
@@ -56,12 +65,22 @@ if __name__ == "__main__":
 
     # Instantiate Game
     game = Game_system()
-    for foo in range(1,11):
-        print(game.create_fruit().__dict__)
+
+    # make looping menu with options like in superhero team dueler?
+
+    # for foo in range(1,11):
+    #     print(game.create_fruit().__dict__)
+
     # game.change_fruit_value()
     # game.change_golden_value()
     # game.change_rotten_value()
+    # game.reset_fruit_value()
+    # game.reset_golden_value()
+    # game.reset_rotten_value()
+    
     for foo in range(1,11):
         game.catch_fruit()
+    print("---------------------------------")
     game.check_contents()
+    print("---------------------------------")
     game.check_points()

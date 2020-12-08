@@ -8,6 +8,7 @@ class Basket:
         self.pts += point_value
         self.caught_fruits += 1
         self.basket_contents.append(name)
+        print("You caught a fruit!")
 
     def check_contents(self):
         print(f"You have {self.caught_fruits} fruits in your basket.")
@@ -25,7 +26,6 @@ if __name__ == "__main__":
     testbasket.catch_fruit(10, "melon")
     testbasket.catch_fruit(10, "banana")
     testbasket.catch_fruit(50, "golden-apple")
-    testbasket.catch_fruit(-100, "durian")
-    testbasket.catch_fruit(50, "golden-apple")
+    testbasket.catch_fruit(-20, "durian")
     testbasket.check_contents()
     testbasket.check_points()
