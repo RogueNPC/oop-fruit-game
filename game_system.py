@@ -29,13 +29,13 @@ class Game_system:
         return Fruit.change_value(new_value)
 
     def change_golden_value(self):
-        print(f"The current value of normal fruits is {Golden_fruit.point_value}.")
-        new_value = input("What would you like the new point value for normal fruits to be? ")
+        print(f"The current value of golden fruits is {Golden_fruit.point_value}.")
+        new_value = input("What would you like the new point value for golden fruits to be? ")
         return Golden_fruit.change_value(new_value)
 
     def change_rotten_value(self):
-        print(f"The current value of normal fruits is {Rotten_fruit.point_value}.")
-        new_value = input("What would you like the new point value for normal fruits to be? ")
+        print(f"The current value of rotten fruits is {Rotten_fruit.point_value}.")
+        new_value = input("What would you like the new point value for rotten fruits to be? ")
         return Rotten_fruit.change_value(new_value)
 
     # resets class variables (public and should be available in the options menu)
