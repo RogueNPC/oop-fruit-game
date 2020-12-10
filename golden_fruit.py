@@ -2,13 +2,17 @@ from random import randint
 from fruit import Fruit
 
 class Golden_fruit(Fruit):
+    # original_value attribute used to reset point_value attribute (private, should not be modified)
     __original_value = 50
+    # point_value attribute (public, can be accessed when printing score in Game_system)
     point_value = 50
 
     def __init__(self):
+        # Golden_fruit attributes (public, accessable by super Fruit class)
         self._name = "golden-apple"
         self._speed = randint(30,45)
 
+    # classmethods that change/reset the point_value (public, accessed by Game_system)
     @classmethod
     def change_value(cls, new_pts_value):
         cls.point_value = new_pts_value
