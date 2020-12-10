@@ -18,7 +18,7 @@ class Fruit:
     @classmethod
     def reset_value(cls):
         cls.point_value = cls.__original_value
-        print(f"The point value of golden fruits have been reset to {cls.__original_value}")
+        print(f"The point value of golden fruits have been reset to {cls.__original_value}.")
 
     def fruit_info(self):
         return f"A {self._name} worth {self.point_value} points."

@@ -62,18 +62,17 @@ if __name__ == "__main__":
     # Instantiate Game
     game = Game_system()
 
-    # make looping menu with options like in superhero team dueler?
-
-    # for foo in range(1,11):
-    #     print(game.__create_fruit().__dict__)
-
-    # game.change_fruit_value()
-    # game.change_golden_value()
-    # game.change_rotten_value()
-    # game.reset_fruit_value()
-    # game.reset_golden_value()
-    # game.reset_rotten_value()
-    
+    print("---------------------------------")
+    game.change_fruit_value()
+    print("---------------------------------")
+    game.change_golden_value()
+    print("---------------------------------")
+    game.change_rotten_value()
+    print("---------------------------------")
+    game.reset_fruit_value()
+    game.reset_golden_value()
+    game.reset_rotten_value()
+    print("---------------------------------")
     for foo in range(1,11):
         game.catch_fruit()
     print("---------------------------------")

@@ -6,7 +6,7 @@ class Rotten_fruit(Fruit):
     point_value = -20
 
     def __init__(self):
-        self._name = "durian"
+        self._name = "rotten-banana"
         self._speed = randint(15,30)
 
     @classmethod
@@ -17,7 +17,7 @@ class Rotten_fruit(Fruit):
     @classmethod
     def reset_value(cls):
         cls.point_value = cls.__original_value
-        print(f"The point value of golden fruits have been reset to {cls.__original_value}")
+        print(f"The point value of golden fruits have been reset to {cls.__original_value}.")
 
 
 if __name__ == "__main__":

@@ -26,6 +26,6 @@ if __name__ == "__main__":
     testbasket.catch_fruit(10, "melon")
     testbasket.catch_fruit(10, "banana")
     testbasket.catch_fruit(50, "golden-apple")
-    testbasket.catch_fruit(-20, "durian")
+    testbasket.catch_fruit(-20, "rotten-banana")
     testbasket.check_contents()
     testbasket.check_points()
